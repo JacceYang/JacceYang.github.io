@@ -17,32 +17,32 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"jacceyang.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="Docker1、概述 Docker 解决的是什么问题？  项目带上环境一起 打包安装，例如项目带上 mysql，redis ，JDK 等环境。 项目环境一套可以多处部署，并且保持环境一致  Docker 的思想来自集装箱，各个docker 镜像是独立隔离，不会冲突。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="netty 实战入门--了解netty">
-<meta property="og:url" content="http://example.com/2022/02/27/docker/docker_01/index.html">
+<meta property="og:title" content="docker 精通">
+<meta property="og:url" content="https://jacceyang.github.io/2022/02/27/docker/docker_01/index.html">
 <meta property="og:site_name" content="1024驿站">
 <meta property="og:description" content="Docker1、概述 Docker 解决的是什么问题？  项目带上环境一起 打包安装，例如项目带上 mysql，redis ，JDK 等环境。 项目环境一套可以多处部署，并且保持环境一致  Docker 的思想来自集装箱，各个docker 镜像是独立隔离，不会冲突。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/Users/user/Library/Application%20Support/typora-user-images/image-20211016220952343.png">
-<meta property="og:image" content="http://example.com/Users/user/Library/Application%20Support/typora-user-images/image-20211016220845251.png">
-<meta property="og:image" content="http://example.com/images/docker_vm.png">
-<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211017105418069.png">
-<meta property="og:image" content="http://example.com/Users/user/Documents/webp.png">
-<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211024215438844.png">
-<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211024225456597.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Library/Application%20Support/typora-user-images/image-20211016220952343.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Library/Application%20Support/typora-user-images/image-20211016220845251.png">
+<meta property="og:image" content="https://jacceyang.github.io/images/docker_vm.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Documents/image-20211017105418069.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Documents/webp.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Documents/image-20211024215438844.png">
+<meta property="og:image" content="https://jacceyang.github.io/Users/user/Documents/image-20211024225456597.png">
 <meta property="article:published_time" content="2022-02-27T13:57:11.696Z">
-<meta property="article:modified_time" content="2022-02-27T14:13:40.695Z">
+<meta property="article:modified_time" content="2022-02-27T14:28:43.018Z">
 <meta property="article:author" content="yangchao">
-<meta property="article:tag" content="网络编程">
-<meta property="article:tag" content="Netty">
+<meta property="article:tag" content="容器">
+<meta property="article:tag" content="docker">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/Users/user/Library/Application%20Support/typora-user-images/image-20211016220952343.png">
+<meta name="twitter:image" content="https://jacceyang.github.io/Users/user/Library/Application%20Support/typora-user-images/image-20211016220952343.png">
 
-<link rel="canonical" href="http://example.com/2022/02/27/docker/docker_01/">
+<link rel="canonical" href="https://jacceyang.github.io/2022/02/27/docker/docker_01/">
 
 
 <script id="page-configurations">
@@ -55,7 +55,7 @@
   };
 </script>
 
-  <title>netty 实战入门--了解netty | 1024驿站</title>
+  <title>docker 精通 | 1024驿站</title>
   
 
 
@@ -177,7 +177,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/27/docker/docker_01/">
+    <link itemprop="mainEntityOfPage" href="https://jacceyang.github.io/2022/02/27/docker/docker_01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -190,7 +190,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          netty 实战入门--了解netty
+          docker 精通
         </h1>
 
         <div class="post-meta">
@@ -201,7 +201,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-27 21:57:11 / 修改时间：22:13:40" itemprop="dateCreated datePublished" datetime="2022-02-27T21:57:11+08:00">2022-02-27</time>
+              <time title="创建时间：2022-02-27 21:57:11 / 修改时间：22:28:43" itemprop="dateCreated datePublished" datetime="2022-02-27T21:57:11+08:00">2022-02-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -209,7 +209,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Netty/" itemprop="url" rel="index"><span itemprop="name">Netty</span></a>
+                  <a href="/categories/dokcer/" itemprop="url" rel="index"><span itemprop="name">dokcer</span></a>
                 </span>
             </span>
 
@@ -465,28 +465,26 @@
 
         
 
-  <div class="followme">
-    <p>欢迎关注我的其它发布渠道</p>
-
-    <div class="social-list">
-
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/images/wechat_channel.jpeg">
-            <span class="icon">
-              <i class="fab fa-weixin"></i>
-            </span>
-
-            <span class="label">WeChat</span>
-          </a>
-        </div>
-    </div>
-  </div>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>yangchao
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://jacceyang.github.io/2022/02/27/docker/docker_01/" title="docker 精通">https://jacceyang.github.io/2022/02/27/docker/docker_01/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="tag"># 网络编程</a>
-              <a href="/tags/Netty/" rel="tag"># Netty</a>
+              <a href="/tags/%E5%AE%B9%E5%99%A8/" rel="tag"># 容器</a>
+              <a href="/tags/docker/" rel="tag"># docker</a>
           </div>
 
         
@@ -499,8 +497,8 @@
       <i class="fa fa-chevron-left"></i> k8s 系列教程-- 认识k8s
     </a></div>
       <div class="post-nav-item">
-    <a href="/2022/02/27/netty/netty_02/" rel="next" title="netty 实战入门--了解netty">
-      netty 实战入门--了解netty <i class="fa fa-chevron-right"></i>
+    <a href="/2022/02/27/netty/netty_02/" rel="next" title="netty 实战入门--系统配置">
+      netty 实战入门--系统配置 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -583,13 +581,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
