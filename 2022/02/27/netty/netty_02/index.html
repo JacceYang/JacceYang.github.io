@@ -20,23 +20,25 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="thrift 历史thrift 是由facebook 公司开发的，最初是为了解决不同的跨语言的服务调用。目前支持的语言多达32 种之多。其主不同于以往的大多数网络框架，不仅提供了丰富的数据结构，而且提供了很好的性能。">
+  <meta name="description" content="系统参数说明Linux 系统系统级设置修改进程级别连接配置 1234vim &#x2F;etc&#x2F;security&#x2F;limits.conf* hard nofile 10000 &#x2F;&#x2F; * 表示当前用户* soft nofile 10000      全局设置1cat &#x2F;proc&#x2F;sys&#x2F;fs&#x2F;file-max      Mac 系统操作系统层面的限制12$ sysctl kern.maxfiles$ sys">
 <meta property="og:type" content="article">
-<meta property="og:title" content="了解thrift （一）">
-<meta property="og:url" content="http://example.com/2022/02/27/mis/thrift_intruduction/index.html">
+<meta property="og:title" content="netty 实战入门--了解netty">
+<meta property="og:url" content="http://example.com/2022/02/27/netty/netty_02/index.html">
 <meta property="og:site_name" content="1024驿站">
-<meta property="og:description" content="thrift 历史thrift 是由facebook 公司开发的，最初是为了解决不同的跨语言的服务调用。目前支持的语言多达32 种之多。其主不同于以往的大多数网络框架，不仅提供了丰富的数据结构，而且提供了很好的性能。">
+<meta property="og:description" content="系统参数说明Linux 系统系统级设置修改进程级别连接配置 1234vim &#x2F;etc&#x2F;security&#x2F;limits.conf* hard nofile 10000 &#x2F;&#x2F; * 表示当前用户* soft nofile 10000      全局设置1cat &#x2F;proc&#x2F;sys&#x2F;fs&#x2F;file-max      Mac 系统操作系统层面的限制12$ sysctl kern.maxfiles$ sys">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/d/df/Apache_Thrift_architecture.png">
-<meta property="article:published_time" content="2022-02-27T09:24:01.394Z">
-<meta property="article:modified_time" content="2022-02-27T11:43:27.541Z">
+<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211102175131632.png">
+<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211102174952277.png">
+<meta property="og:image" content="http://example.com/Users/user/Documents/image-20211102200533331.png">
+<meta property="article:published_time" content="2022-02-27T14:21:08.526Z">
+<meta property="article:modified_time" content="2022-02-27T14:24:58.436Z">
 <meta property="article:author" content="yangchao">
-<meta property="article:tag" content="RPC">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="网络编程">
+<meta property="article:tag" content="Netty">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://upload.wikimedia.org/wikipedia/commons/d/df/Apache_Thrift_architecture.png">
+<meta name="twitter:image" content="http://example.com/Users/user/Documents/image-20211102175131632.png">
 
-<link rel="canonical" href="http://example.com/2022/02/27/mis/thrift_intruduction/">
+<link rel="canonical" href="http://example.com/2022/02/27/netty/netty_02/">
 
 
 <script id="page-configurations">
@@ -49,7 +51,7 @@
   };
 </script>
 
-  <title>了解thrift （一） | 1024驿站</title>
+  <title>netty 实战入门--了解netty | 1024驿站</title>
   
 
 
@@ -171,7 +173,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/27/mis/thrift_intruduction/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/27/netty/netty_02/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -184,7 +186,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          了解thrift （一）
+          netty 实战入门--了解netty
         </h1>
 
         <div class="post-meta">
@@ -195,7 +197,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-27 17:24:01 / 修改时间：19:43:27" itemprop="dateCreated datePublished" datetime="2022-02-27T17:24:01+08:00">2022-02-27</time>
+              <time title="创建时间：2022-02-27 22:21:08 / 修改时间：22:24:58" itemprop="dateCreated datePublished" datetime="2022-02-27T22:21:08+08:00">2022-02-27</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -203,7 +205,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Thrift/" itemprop="url" rel="index"><span itemprop="name">Thrift</span></a>
+                  <a href="/categories/Netty/" itemprop="url" rel="index"><span itemprop="name">Netty</span></a>
                 </span>
             </span>
 
@@ -225,46 +227,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="thrift-历史"><a href="#thrift-历史" class="headerlink" title="thrift 历史"></a>thrift 历史</h2><p>thrift 是由facebook 公司开发的，最初是为了解决不同的跨语言的服务调用。目前支持的语言多达32 种之多。其主不同于以往的大多数网络框架，不仅提供了丰富的数据结构，而且提供了很好的性能。</p>
-<span id="more"></span>
-<h2 id="thrift-框架组成"><a href="#thrift-框架组成" class="headerlink" title="thrift 框架组成"></a>thrift 框架组成</h2><p>thrift 对软件栈的定义非常清晰。各个组件能够松散的耦合。 正对不同的场景选择不同的方式去搭建服务。</p>
-<p>Thrift 栈的模型如下所示：<br><img src="https://upload.wikimedia.org/wikipedia/commons/d/df/Apache_Thrift_architecture.png" alt="image"></p>
-<ul>
-<li><p>自顶向下分为：服务层（service layer），处理层（Processor layer），协议层（Protocal Layer），（传输层 Transport Layer）.</p>
-</li>
-<li><p>传输层： 负责直接从网络中读取和写入数据，它定义了具体的网络协议，比如说 TCP&#x2F;IP 传输等</p>
-</li>
-<li><p>协议层：定义了数据传输的格式，负责网络传输数据的序列化和反序列化。比如JSON，XML 和二进制数据等。</p>
-</li>
-<li><p>处理层：处理层由IDL 生成的，封装了具体的底层网络传输和序列化，并委托给用户实现的handler 处理。</p>
-</li>
-<li><p>服务层：整合上述组件，提供具体的网络线程&#x2F;IO服务模型，形成最终的服务。</p>
-</li>
-</ul>
-<h2 id="Thrift-特点"><a href="#Thrift-特点" class="headerlink" title="Thrift 特点"></a>Thrift 特点</h2><p><strong>开发速度快</strong><br>通过编写RPC接口Thritf IDL文件，利用编译生成器，自动生成服务端 骨架（Skeletons） 和客户端桩 （stubs），从而省去了开发者自定义和维护接口编解码，消息传输，服务器多线程模型等基础工作。</p>
-<p>服务端：自需要按照<strong>服务骨架</strong> 即接口，编写好具体的业务处理程序就行了。</p>
-<p>客户端：只需要拷贝 IDL定义好的客户端桩和服务对象，然后就可以像本地调用一样调用服务了。</p>
-<p><strong>接口维护简单</strong><br>通过维护thrift 格式的IDL文件即可。</p>
-<p><strong>学习成本低</strong><br>IDL文件风格类似于 google protobuf，且更加 易读易懂，特别是RPC 服务接口风格，像写一个面向对象的class 一样简单<br><strong>跨语言支持</strong><br>支持各种语言</p>
-<p><strong>稳定广泛的应用</strong><br>目前的使用公司国内外有百度，小米，美团等，稳定高效.</p>
-<h2 id="thrift-支持的数据类型"><a href="#thrift-支持的数据类型" class="headerlink" title="thrift 支持的数据类型"></a>thrift 支持的数据类型</h2><p><strong>基础类型</strong><br>bool<br>byte<br>i16<br>i32<br>i64<br>double<br>string<br>binary</p>
-<p><strong>结构体类型</strong><br>struct 定义的结构体对象</p>
-<p><strong>容器类型</strong><br>list<br>set<br>map</p>
-<p><strong>异常类型</strong><br>Exception 自定义</p>
-<p><strong>服务类型</strong><br>service 具体对应的服务类</p>
-<h2 id="Ttransport"><a href="#Ttransport" class="headerlink" title="Ttransport"></a>Ttransport</h2><ul>
-<li>TSocket：使用阻塞式I&#x2F;O进行传输，是最常见的模式</li>
-<li>TNonblockingTransport：使用非阻塞方式，用于构建异步客户端</li>
-<li>TFramedTransport：使用非阻塞方式，按块的大小进行传输，类似于Java中的NIO</li>
-</ul>
-<h2 id="TPortocal"><a href="#TPortocal" class="headerlink" title="TPortocal"></a>TPortocal</h2><ul>
-<li>Thrift 可以让用户选择客户端和服务端之间的传输通信协议，在传输协议上主要分为 文本和二进制传输协议，而立节约带宽，提高传输效率，一般情况下使用二进制类型的传输协议。目前支持的有如下几种：</li>
-<li>TBinaryProtocal:二进制编码格式进行数据传输</li>
-<li>TCompactProtocal:高效率的、密集的二进制编码格式进行数据传输</li>
-<li>TJSONProtocal:使用JSON文本的数据编码协议进行数据传输</li>
-<li>TSimpleJsonProtocal:：只提供JSON只写的协议，适用于通过脚本语言解析</li>
-</ul>
-<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://docs.oracle.com/javase/1.5.0/docs/guide/rmi/spec/rmi-arch2.html">https://docs.oracle.com/javase/1.5.0/docs/guide/rmi/spec/rmi-arch2.html</a></p>
+        <span id="more"></span>
+<h2 id="系统参数说明"><a href="#系统参数说明" class="headerlink" title="系统参数说明"></a>系统参数说明</h2><h2 id="Linux-系统"><a href="#Linux-系统" class="headerlink" title="Linux 系统"></a>Linux 系统</h2><h3 id="系统级设置"><a href="#系统级设置" class="headerlink" title="系统级设置"></a>系统级设置</h3><p>修改进程级别连接配置</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/security/limits.conf</span><br><span class="line"></span><br><span class="line">* hard nofile 10000 // * 表示当前用户</span><br><span class="line">* soft nofile 10000</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="全局设置"><a href="#全局设置" class="headerlink" title="全局设置"></a>全局设置</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /proc/sys/fs/file-max</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="Mac-系统"><a href="#Mac-系统" class="headerlink" title="Mac 系统"></a>Mac 系统</h2><h3 id="操作系统层面的限制"><a href="#操作系统层面的限制" class="headerlink" title="操作系统层面的限制"></a>操作系统层面的限制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">sysctl kern.maxfiles</span></span><br><span class="line"><span class="meta">$ </span><span class="language-bash">sysctl kern.maxfilesperproc</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="launchd-对进程的限制"><a href="#launchd-对进程的限制" class="headerlink" title="launchd 对进程的限制"></a>launchd 对进程的限制</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$ </span><span class="language-bash">launchtrl <span class="built_in">limit</span> maxfiles</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>sudo launchctl limit maxfiles 15000 2000000</p>
+<p><img src="/Users/user/Documents/image-20211102175131632.png" alt="image-20211102175131632"></p>
+<p><img src="/Users/user/Documents/image-20211102174952277.png" alt="image-20211102174952277"></p>
+<p><img src="/Users/user/Documents/image-20211102200533331.png" alt="image-20211102200533331"></p>
 
     </div>
 
@@ -308,8 +296,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/RPC/" rel="tag"># RPC</a>
-              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/" rel="tag"># 网络编程</a>
+              <a href="/tags/Netty/" rel="tag"># Netty</a>
           </div>
 
         
@@ -317,9 +305,12 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2022/02/27/netty/netty_01/" rel="next" title="netty 实战入门--了解netty">
+    <a href="/2022/02/27/docker/docker_01/" rel="prev" title="netty 实战入门--了解netty">
+      <i class="fa fa-chevron-left"></i> netty 实战入门--了解netty
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2022/02/27/resume/mianshi_01/" rel="next" title="netty 实战入门--了解netty">
       netty 实战入门--了解netty <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -380,7 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#thrift-%E5%8E%86%E5%8F%B2"><span class="nav-number">1.</span> <span class="nav-text">thrift 历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thrift-%E6%A1%86%E6%9E%B6%E7%BB%84%E6%88%90"><span class="nav-number">2.</span> <span class="nav-text">thrift 框架组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Thrift-%E7%89%B9%E7%82%B9"><span class="nav-number">3.</span> <span class="nav-text">Thrift 特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#thrift-%E6%94%AF%E6%8C%81%E7%9A%84%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">thrift 支持的数据类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ttransport"><span class="nav-number">5.</span> <span class="nav-text">Ttransport</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TPortocal"><span class="nav-number">6.</span> <span class="nav-text">TPortocal</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E"><span class="nav-number">1.</span> <span class="nav-text">系统参数说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-%E7%B3%BB%E7%BB%9F"><span class="nav-number">2.</span> <span class="nav-text">Linux 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%B3%BB%E7%BB%9F%E7%BA%A7%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.1.</span> <span class="nav-text">系统级设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%A8%E5%B1%80%E8%AE%BE%E7%BD%AE"><span class="nav-number">2.2.</span> <span class="nav-text">全局设置</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac-%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">Mac 系统</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%B1%82%E9%9D%A2%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-number">3.1.</span> <span class="nav-text">操作系统层面的限制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#launchd-%E5%AF%B9%E8%BF%9B%E7%A8%8B%E7%9A%84%E9%99%90%E5%88%B6"><span class="nav-number">3.2.</span> <span class="nav-text">launchd 对进程的限制</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
