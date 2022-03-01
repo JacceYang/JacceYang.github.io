@@ -21,8 +21,9 @@ tags:   #标签
 
 一个 select * from table A where a=1, b>2 ,c =3 ;  回答OK
 
-锁讲一下 ： 
-
+锁知识:
+锁的种类？
+不同事物隔离级别下锁的特点？
 
 
 ## Redis
@@ -32,7 +33,10 @@ tags:   #标签
 * Redis 集群结构
 
 * 雪崩，击穿
+
 * 热点key 的治理
+
+* 大key的 治理
 
 * 更新策略
 * Rehash 熟悉吗
